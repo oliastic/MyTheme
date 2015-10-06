@@ -1,0 +1,47 @@
+
+<!-- LOOP THROUGH POSTS -->
+<div class="my_loop">
+{{#foreach posts}}
+
+
+<!-- START ARTICLE-->
+<article class="my_loop_article" role="article" itemscope itemtype="http://schema.org/Article">
+
+<header class="my_loop_article_header">
+	
+	<!-- DATE -->
+	<div class="my_loop_article_time" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+	{{date format='DD MMM YYYY'}} by {{author}}
+	</div>
+
+	<!-- TITLE -->
+	<h1 class="my_loop_article_title" itemprop="headline"><a href="{{{url}}}" rel="bookmark">
+	{{title}}
+	</a></h1>
+	
+</header>	
+
+	<!-- CONTENT -->
+	<div class="my_loop_article_content" itemprop="articleBody">	
+	{{excerpt words="50"}}...
+	</div>
+
+	<!-- TAGS -->	
+	{{#if tags}}
+	<div class="my_loop_article_tags">
+	{{tags separator=" | "}}
+	</div>
+	{{/if}}
+	
+	
+<!-- CLOSE ARTICLE -->
+</article>	
+
+
+{{/foreach}}
+</div>
+
+<!-- ADD PAGINATION IF REQUIRED -->
+{{#if pagination}}
+{{{pagination}}}
+{{/if}}

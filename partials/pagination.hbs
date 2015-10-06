@@ -1,0 +1,20 @@
+
+<!-- PAGINATION MAIN -->
+<div class="my_pagination">
+	
+	<!-- NEWER POSTS -->	
+	<div class="my_pagination_newer {{#if prev}}my_do_render{{/if}}">
+		<a href="{{page_url prev}}">&larr; Newer Posts</a>
+	</div>	
+
+	<!-- PAGE NUMBER -->
+	<div class="my_pagination_number">
+		<span>Page {{page}} of {{pages}}</span>	
+	</div>
+	
+	<!-- OLDER POSTS -->	
+	<div class="my_pagination_older {{#if next}}my_do_render{{/if}}">
+		<a href="{{page_url next}}">Older Posts &rarr;</a>
+	</div>		
+	
+</div>

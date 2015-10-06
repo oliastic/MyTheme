@@ -1,0 +1,62 @@
+<div role='banner' class="my_header_main">
+
+  <div class="my_header_content">
+  
+    <div class="my_header_row">
+        
+      <!-- BLOG LOGO -->
+      {{#if @blog.logo}}
+      <div id="my_id_bloglogo" class="my_header_bloglogo">
+        <a href="{{@blog.url}}">
+        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+        </a>
+      </div>
+      {{/if}}	
+      
+      <div id="my_id_blogtext" class="my_header_blogtext">
+          
+        <!-- BLOG TITLE -->	
+        <div id="my_id_blogtitle" class="my_header_blogtitle">
+          <a title="{{@blog.title}}" href='{{@blog.url}}'>
+          {{{@blog.title}}}
+          </a>
+        </div>
+
+        <!-- BLOG TITLE -->	
+        <div id="my_id_blogdescription" class="my_header_blogdescription">		
+          {{@blog.description}}		
+        </div>	
+        
+      </div>			
+    
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>       
+            
+	if(my_theme_do_hide_blogtitle)
+	{
+		var aElementBlogTitle = document.getElementById('my_id_blogtitle');
+    aElementBlogTitle.className = aElementBlogTitle.className + " my_do_not_display";   
+  }  
+    
+  if(my_theme_do_hide_blogdescription)
+	{
+		var aElementBlogDescription = document.getElementById('my_id_blogdescription');
+    aElementBlogDescription.className = aElementBlogDescription.className + " my_do_not_display";  
+  }    
+  
+  if(my_theme_do_align_bloglogo_vertically)
+  {
+    var aElementBlogLogo = document.getElementById('my_id_bloglogo');
+    aElementBlogLogo.className = "my_header_bloglogo_vertical"; 
+    
+    var aElementBlogText = document.getElementById('my_id_blogtext');
+    aElementBlogText.className = "my_header_blogtext_vertical"; 
+  }    
+       
+</script>  

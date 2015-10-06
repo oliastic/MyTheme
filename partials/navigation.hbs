@@ -1,0 +1,62 @@
+<!-- NAVIGATION MAIN -->
+<div class="my_navigation_main">
+
+
+	<!-- NAVIGATION LIST -->	
+	<div class="my_navigation_list">
+
+		{{#foreach navigation}}		
+		<a class="my_navigation_list_item_left" href="{{url absolute="true"}}">{{label}}</a>		
+		{{/foreach}}		
+						       
+			<!-- BONUS PAGES -->	
+			<a id="my_id_bonus_page_1" class="my_navigation_list_item_right my_navigation_list_item_right_first" href="{{@blog.url}}/about/"></a>
+			<a id="my_id_bonus_page_2" class="my_navigation_list_item_right" href="{{@blog.url}}/about/"></a>
+			<a id="my_id_bonus_page_3" class="my_navigation_list_item_right" href="{{@blog.url}}/about/"></a>
+			      
+      <!-- SEARCH FIELD -->				
+			<div id="my_id_search_field" class="my_navigation_search_field"></div>          
+			
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="{{asset "js/jquery.ghostHunter.js"}}"></script>
+   
+   
+	</div>	
+
+</div>
+
+
+
+<!-- NAVIGATION COVER -->	
+<span class="my_navigation_cover">
+</span>
+
+
+
+<script>       
+            
+	if(my_theme_do_display_search_field)
+	{
+		document.getElementById('my_id_search_field').innerHTML = '<form action="{{@blog.url}}" method="GET"><input id="search-field" placeholder="search all posts" tabindex="1" autocomplete="off" maxlength="240"/><input id="my_id_search_button" type="submit" value="Search"></form>';   
+        
+
+    if(my_theme_do_display_search_field_in_separate_row)  
+    {    
+      document.getElementById('my_id_search_field').className =  document.getElementById('my_id_search_field').className + " my_do_clear_both";        
+    }
+	}	
+			
+	document.getElementById('my_id_bonus_page_1').innerHTML = my_theme_bonus_page_name_1;
+	document.getElementById('my_id_bonus_page_1').href 		= my_theme_bonus_page_link_1;
+			
+	document.getElementById('my_id_bonus_page_2').innerHTML = my_theme_bonus_page_name_2;
+	document.getElementById('my_id_bonus_page_2').href 		= my_theme_bonus_page_link_2;
+			
+	document.getElementById('my_id_bonus_page_3').innerHTML = my_theme_bonus_page_name_3;
+	document.getElementById('my_id_bonus_page_3').href 		= my_theme_bonus_page_link_3;				
+      
+</script>
+		
+<script src="{{asset "js/search.js"}}"></script>		
+ 

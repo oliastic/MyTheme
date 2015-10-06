@@ -1,0 +1,35 @@
+<!-- AUTHOR BIO -->	
+<div class="my_post_article_author_main">	
+
+  <div class="my_author_header_content">	
+  
+    <div class="my_author_header_row">    
+    
+      {{#if author.image}}
+       <div class="my_author_header_image"><a href="{{@blog.url}}/author/{{author.slug}}"><img src="{{author.image}}" itemprop="image" /></a></div>
+      {{/if}}
+	
+	
+      <div id="my_id_author_header_text" class="my_author_header_text">
+        
+        <div class="my_author_header_name"><a href="{{@blog.url}}/author/{{author.slug}}">{{author.name}}</a></div>      
+      
+        {{#if author.bio}}
+        <div class="my_author_header_bio">{{author.bio}}</div>
+        {{/if}}            
+        
+        {{#if author.location}}
+        <div class="my_author_header_location">{{author.location}}</div>
+        {{/if}}            
+        
+        {{#if author.website}}
+        <div class="my_author_header_website"><a href="{{author.website}}" target="_blank" itemprop="url">{{author.website}}</a></div>
+        {{/if}}	
+        
+      </div>  
+     
+    </div>  
+    
+  </div> 
+
+</div>  

@@ -1,0 +1,68 @@
+<!-- 
+--------------------------------------------------------
+Project:     MyTheme
+Description: customizable and responsive Ghost theme
+Author:      Oliver Arold
+Mail:        mail@oliastic.de  
+Website:     www.blog.oliastic.com  
+--------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+ 
+ 
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+ 
+    {{! Responsive Meta Tags }}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+	{{! Favicon }}
+	<link rel="shortcut icon" href="{{asset "/favicon.ico"}}">	
+		
+	{{! Styles }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/style_default.css" />
+	
+	{{! Scripts }}
+	<script type="text/javascript" src="{{asset "js/config.js"}}"></script>	
+	     
+	<!-- ghost style and meta data -->
+	{{ghost_head}}
+	 
+</head>
+
+
+<!--
+Description: tag {{body_class}}
+home page: 				"home-template"
+old pages,pagination: 	"archive-template"
+posts: 					"post-template"
+-->
+<body class="{{body_class}}">
+	
+	<!-- MAIN CONTENT: LATEST POSTS, SINGLE POST -->
+	<div class="my_body_main_content">
+		{{{body}}}
+	</div>
+	
+	<!-- ghost scripts and meta data -->
+	{{ghost_foot}}	
+	
+</body>
+
+<script>       
+</script>
+
+
+</html>

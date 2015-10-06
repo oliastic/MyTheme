@@ -1,0 +1,33 @@
+<!-- USE DEFAULT.HBS AS LAYOUT PAGE -->
+{{!< default}}
+
+
+<!-- INCLUDE HEADER -->
+{{> header}}
+
+
+<!-- INCLUDE NAVIGATION -->
+{{navigation}}	
+
+
+<!-- START MAIN -->
+<main class="my_post_main" role="main">
+
+  <!-- DISPLAY RESULTS IF SEARCH PERFORMED -->
+	<div id="results"></div>
+	  
+	<!-- DISPLAY NORMAL CONTENT -->
+	<div id="results_hide">    
+    <!-- IMPORT INDEX HEADER -->
+    {{> "header_post"}}
+  
+    <!-- IMPORT SINGLE POST -->
+		{{>single_post}}	
+	</div>
+
+<!-- CLOSE MAIN -->
+</main>
+
+
+<!-- INCLUDE FOOTER -->
+{{> footer}}

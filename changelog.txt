@@ -1,0 +1,12 @@
+--------------------------------------------------------
+Project:     MyTheme
+Description: customizable and responsive Ghost theme
+Author:      Oliver Arold
+Mail:        mail@oliastic.de  
+Website:     www.blog.oliastic.com  
+--------------------------------------------------------
+
+
+MyTheme 1.0.0, 6th October 2015
+--------------------------------------------------------
+- first version released

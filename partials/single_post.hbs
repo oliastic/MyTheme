@@ -1,0 +1,121 @@
+<!-- START POST -->
+{{#post}}
+
+
+<!-- START ARTICLE-->
+<article class="my_post_article" role="article" itemscope itemtype="http://schema.org/Article">
+
+<header class="my_post_article_header">
+	
+	<!-- DATE -->
+	<time class="my_post_article_time" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+	{{date format='DD MMM YYYY'}}
+	</time>	
+	
+	<!-- TITLE -->
+	<div class="my_post_article_title" itemprop="headline">
+	{{title}}
+	</div>
+	
+	<!-- TAGS -->	
+	{{#if tags}}
+	<div class="my_post_article_tags">
+	{{tags separator=" | "}}
+	</div>
+	{{/if}}	
+	
+</header>	
+
+	<!-- CONTENT -->
+	<div class="my_post_article_content" itemprop="articleBody">
+	{{content}}
+	</div>
+
+	
+<div class="my_post_article_footer">
+	
+	<!-- SHARE LINKS -->	
+	<div class="my_post_article_share">
+		<h4 class="my_post_article_share_headline">Share this post &nbsp;</h4>			
+		<a class="my_post_article_share_item icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="my_do_not_display">Twitter</span>
+        </a>		
+        <a class="my_post_article_share_item icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="my_do_not_display">Facebook</span>
+        </a>
+        <a class="my_post_article_share_item icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+            <span class="my_do_not_display">Google+</span>
+        </a>
+	</div>
+	
+	
+	<!-- AUTHOR BIO -->	
+	{{#if author}}
+    {{> author}}
+    {{/if}}
+
+</div>	
+
+    
+	<!-- ADD DISQUS COMMENTS IF DESIRED-->
+	<div id="my_id_comments">
+		<div id="disqus_thread"></div>	
+	</div>		
+	<script>
+		if(my_theme_disqus_do_activate_comments)
+		{
+			// set disqus settings according to config.js
+			var disqus_shortname 	= my_theme_disqus_shortname;
+			var disqus_identifier = 'global';
+      var disqus_title      = '{{@blog.title}}';                              
+      var disqus_url        = '{{@blog.url}}';   
+      			
+      // create individual identifier and title if separate threads are desired     
+			if(my_theme_disqus_do_create_thread_per_post)
+			{
+				disqus_identifier = '{{id}}';
+        disqus_title      = '{{title}}';          
+        disqus_url        = disqus_url + '{{url}}';
+      }							      
+			
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() 
+			{
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			}
+			)();
+		}
+		else
+		{
+			document.getElementById('my_id_comments').innerHTML = '';
+		}
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+	<!-- OPEN LINKS IN ARTICLES IN NEW TABS -->
+	<script>
+		$('.my_post_article_content a').attr('target', '_blank');      
+    $('a[href^="#"]').attr('target', '_parent');      
+	</script>
+
+	
+	
+	
+	
+<!-- CLOSE ARTICLE -->
+</article>	
+
+<!-- CLOSE POST -->
+{{/post}}
+
+
+<!-- ADD PAGINATION IF REQUIRED -->
+{{#if pagination}}
+{{{pagination}}}
+{{/if}}

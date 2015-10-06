@@ -1,0 +1,35 @@
+<!-- POST HEADER MAIN -->
+<div class="my_tag_header_main">
+
+  <!-- TAG CONTENT -->	
+  <div class="my_tag_header_content">	
+  
+    <div class="my_tag_header_row">
+          
+      {{#if tag.image}}
+       <div class="my_tag_header_image"><a href="{{@blog.url}}/tag/{{tag.name}}"><img src="{{tag.image}}" itemprop="image" /></a></div>
+      {{else}}
+        {{#if @blog.logo}}	
+         <div class="my_tag_header_image"><a href="{{@blog.url}}/tag/{{tag.name}}"><img src="{{@blog.logo}}" itemprop="image" /></a></div>	 
+         {{/if}}
+      {{/if}}	
+      
+      <div id="my_id_tag_header_text" class="my_tag_header_text">
+          
+        <div class="my_tag_header_name"><a href="{{@blog.url}}/tag/{{tag.name}}">{{tag.name}}</a></div>
+        
+        {{#if tag.description}}
+        <div class="my_tag_header_description">{{tag.description}}</div>
+       {{/if}}
+       
+       <div class="my_tag_header_posts">{{pagination.total}} posts</div>	
+       
+      </div> 
+    
+    </div>
+
+  </div>
+  
+</div>  
+
+
