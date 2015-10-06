@@ -1,4 +1,4 @@
-﻿﻿# MyTheme
+# MyTheme
 
 **MyTheme** is an *easy-to-use*, *customizable* and *responsive* **Ghost**<sup id="t1">[1](#f1)</sup> theme. 
 See it in action on www.blog.oliastic.com!
@@ -43,7 +43,7 @@ The following elements configured in the **Ghost Config Environment** (`http://[
 * Tag Name, Description, Image
 * Navigation Entries
 
-Of course you do not have to define every single one of them. Just leave all things blank that you do not want to show up!
+Of course, you do not have to define every single one of them. Just leave all things blank that you do not want to show up!
 
 
 
@@ -51,7 +51,7 @@ Of course you do not have to define every single one of them. Just leave all thi
 
 ### Basic configuration via config file
 
-**MyTheme** uses a single file file for the basic configuration! 
+**MyTheme** uses a single file for the basic configuration! 
 
 Open the `config.js` located under
 
@@ -96,7 +96,7 @@ Set to ***false*** otherwise.
 
 #### Bonus Pages
 
-**MyTheme** allows you to define up to 3 additional bonus pages. 
+**MyTheme** allows you to define up to three additional bonus pages. 
 All regular menu items (defined in the **Ghost Config Environment**)  will appear on the left side (or on the top for small screens) of the navigation menu.
 All bonus pages will appear on the right side (or on the bottom for small screens) of the navigation menu. 
 
@@ -128,7 +128,7 @@ Set to ***false*** otherwise.
 
 
 ##### `my_theme_static_page_do_show_comments`
-Set to ***true*** if comments should be displayed at the bottom of a static pages. 
+Set to ***true*** if comments should be displayed at the bottom of static pages. 
 Set to ***false*** otherwise. 
 
 
@@ -142,17 +142,14 @@ Set to ***false*** otherwise.
 
 
 ##### `my_theme_disqus_do_create_thread_per_post`
-Set to ***true*** if separate comment thread should be created for each page. 
+Set to ***true*** if a separate comment thread should be created for each post. 
 Set to ***false*** to use one global comment thread shared by all posts of your blog.
 
 
 ##### `my_theme_disqus_shortname`
 Set to the *Disqus shortname* that you have registered for your blog.
-
 * *Disqus identifier*, *title* and *url* are automatically set by **MyTheme**!
 * Comment threads will be kept when blog is moved to another URL
-
-
 
 
 
@@ -184,8 +181,8 @@ To further adapt the design and layout of **MyTheme** according to your wishes e
 ## Further Remarks
 
 * **MyTheme** is published under **The MIT License (MIT)**<sup id="t4">[4](#f4)</sup>
-* Of course you can use and change **MyTheme** as you like 
-* It would be nice, if you leave the short **reference to my website** in the footer (or instead add a reference to my website somewhere else). Thanks!
+* You can use and change **MyTheme** as you like 
+* It would be nice, if you leave the short **reference to my website** in the footer, or instead add a reference to my website somewhere else. Thanks!
 
 But now, have fun blogging, coding or whatever!
 
