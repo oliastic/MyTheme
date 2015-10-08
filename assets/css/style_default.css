@@ -329,11 +329,11 @@ body
 a 
 {
 	text-decoration: none;	
-	-o-transition: all .25s;
-	-ms-transition: all .25s;
-	-moz-transition: all .25s;
-	-webkit-transition: all .25s;	
-	transition: all .25s;
+	-o-transition: color .25s, background-color .25s;
+	-ms-transition: color .25s, background-color .25s;
+	-moz-transition: color .25s, background-color .25s;
+	-webkit-transition: color .25s, background-color .25s;
+	transition: color .25s, background-color .25s;
 }
 
 html
@@ -347,7 +347,7 @@ html
 	max-width:60rem;	
   min-width:200px;
 	margin:auto;
-	width:98%;     
+	width:98%;  
 }
 
 #disqus_thread
