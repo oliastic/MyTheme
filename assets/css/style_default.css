@@ -282,6 +282,21 @@ a:hover, a:active
   box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);  	
 }
 
+.MyImageRow2 img
+{
+  width: 49%;
+}
+
+.MyImageRow3 img
+{
+  width: 32%;
+}
+
+.MyImageRow4 img
+{
+  width: 24%;
+}
+
 .MyClearLeft
 {
 	clear: left;
@@ -461,7 +476,7 @@ html
 	text-align: center;	
 }
    
-.my_body_main_content main
+.my_index_main, .my_post_main, .my_author_main, .my_tag_main
 {
 	margin-bottom:10rem;		
 }   
@@ -629,15 +644,12 @@ html
    ========================================================================== */
 .my_index_main, .my_author_main, .my_tag_main
 {		
-	margin:auto;
 	margin-top:2rem;		
 	clear:both;	
 }
 
 .my_index_header_main, .my_post_header_main, .my_page_header_main
-{
-	/*display:none;*/
-  margin:auto;	
+{	
   margin-bottom:2rem;  
 }
 
